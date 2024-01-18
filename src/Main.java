@@ -7,17 +7,16 @@ public class Main {
         boolean validResponse = false;
 
         do {
-            System.out.println("Hello! Would you like to play a game of Snap?");
-            String userResponse = scanner.nextLine().toLowerCase(); // Convert the input to lowercase for case-insensitivity
+            System.out.println("Hello! Would you like to watch a game of Snap? Respond with yes or no.");
+            // Convert the input to lowercase for case-insensitivity
+            String userResponse = scanner.nextLine().toLowerCase();
 
             if (userResponse.equals("yes")) {
-                System.out.println("Welcome to the game!");
                 validResponse = true;
-                // Add your game logic here
+                Snap.play();
             } else if (userResponse.equals("no")) {
                 System.out.println("Okay, see you soon!");
                 validResponse = true;
-                // You can close the game or perform any other necessary actions here
             } else {
                 System.out.println("Please enter a valid answer of 'yes' or 'no'.");
             }
