@@ -27,4 +27,19 @@ public class Card {
     public String toString() {
         return rank + " of " + suit;
     }
+
+    @Override
+    public int hashCode() {
+        return rank.hashCode() + suit.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Card otherCard = (Card) obj;
+        return otherCard.getRank().equals(rank) && otherCard.getSuit().equals(suit);
+    }
 }

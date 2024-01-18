@@ -5,6 +5,8 @@ public class Player {
     private Stack<Card> visibleCards;
     private int score;
 
+    private int roundsWon;
+
     public int playerNumber;
 
     public Player(int playerNumber) {
@@ -27,6 +29,8 @@ public class Player {
         return playingCards.isEmpty();
     }
 
+    public void discardPlayingCards() {playingCards.clear();}
+
     public Card peekVisibleCards() {
         return visibleCards.peek();
     }
@@ -39,7 +43,7 @@ public class Player {
         return visibleCards.size();
     }
 
-    private void discardVisibleCards() {
+    public void discardVisibleCards() {
         visibleCards.clear();
     }
 
@@ -60,6 +64,22 @@ public class Player {
 
     public int getScore() {
         return score;
+    }
+
+    public void resetScore() {
+        score = 0;
+    }
+
+    public int getRoundsWon() {
+        return roundsWon;
+    }
+
+    public void announceRoundsWon() {
+        System.out.println(this + " has won " + roundsWon + " rounds");
+    }
+
+    public void incrementRoundsWon() {
+        roundsWon++;
     }
 
     @Override
