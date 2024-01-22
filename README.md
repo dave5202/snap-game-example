@@ -10,7 +10,7 @@
 ## Design Choices
 This task could in theory be completed in one single Java file but it is important to adhere to the principle of 'the seperation of concerns' which object oriented programming enables nquite naturally. A `Player` receives their stack of `playingCards` from an initialized `Deck` that distributes each `Card` appropriately. This also allows for encapsulation, where the `Snap` game only uses the methods made available by the `Player` for them to play the game with no direct access to their stack of cards:
 - The `Snap` class is where the game is simulated
-- The `Player` class is be responsible for managing the player's stack, score and their playing ability.
+- The `Player` class is responsible for managing the player's stack, score and their playing ability.
 - The `Deck` class handles the initialization of the deck, shuffling, and dealing cards.
 - The `Card` class represents individual cards
 
