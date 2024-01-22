@@ -1,7 +1,7 @@
 # Snap
  ## Instructions for running Snap Game 
 - Clone the repo
-- Enter the `src` directory of the repo
+- Enter the `src` directory of the repo in your terminal
 - Run the command `javac Main.java`
 - Run the command `java Main`
 - Now you can watch a game of snap!
