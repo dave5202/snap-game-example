@@ -29,15 +29,14 @@ public class Main {
     }
 
     private static int getNumberOfRounds(Scanner scanner) {
-        int numRounds;
+        int numRounds = -1;
 
-        while (true) {
+        while (numRounds < 1) {
             try {
-                System.out.print("Enter the number of rounds you want to watch: ");
+                System.out.print("Enter the number of rounds you want to watch (a positive integer): ");
                 numRounds = scanner.nextInt();
-                break;
             } catch (InputMismatchException e) {
-                System.out.println("Please enter a valid integer.");
+                System.out.println("Please enter a valid positive integer.");
                 scanner.nextLine(); // Consume the invalid input to avoid an infinite loop
             }
         }
